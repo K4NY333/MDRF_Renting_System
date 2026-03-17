@@ -1,0 +1,563 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #dad4b5;
+    min-height: 100vh;
+}
+
+/* Top Carousel Styles */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 400px;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 520px;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: #492f18;
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo-text {
+    color: white;
+    margin-left: 10px;
+}
+
+.logo-text h1 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.logo-text p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.main-container {
+    padding: 40px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.mascot {
+    margin-top: 40px;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mascot img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scaleX(-1); /* flip horizontally */
+}
+
+.mascot-welcome {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    flex: 1;
+}
+
+.welcome-text {
+    font-size: 50px;
+    color: #543310;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn {
+    background-color: #7c532d;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background-color: #9c693a;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #492f18;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lease-section {
+    background-color: #492f18;
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.lease-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.lease-content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 100px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.property-image {
+    width: 250px;
+    height: 180px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-left: 50px;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.room-images {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    height: 140px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px;
+
+    scrollbar-width: thin;
+    scrollbar-color: #7c532d #f5f5f5;
+}
+
+.room-images::-webkit-scrollbar {
+    height: 9px;
+}
+
+.room-images::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 3px;
+}
+
+.room-images::-webkit-scrollbar-thumb {
+    background: #7c532d;
+    border-radius: 3px;
+}
+
+.room-images::-webkit-scrollbar-thumb:hover {
+    background: #9c693a;
+}
+
+.room-images img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+.room-images span {
+    color: #492f18;
+    font-size: 12px;
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+}
+
+.room-images {
+    scroll-behavior: smooth;
+}
+/* Modal overlay for lease termination */
+.modal-terminate {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Show modal when display is set to flex via JS */
+.modal-terminate[style*="display: flex"] {
+    display: flex !important;
+}
+
+/* Modal content box */
+.modal-terminate > div {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 350px;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    animation: modalPopIn 0.2s;
+}
+
+/* Close button (X) */
+.modal-terminate button[style*="position:absolute"] {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.modal-terminate button[style*="position:absolute"]:hover {
+    color: #d9534f;
+}
+
+/* Input date styling */
+.input-date {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* Modal buttons */
+.modal-terminate .btn {
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+}
+.modal-terminate .btn.btn-secondary {
+    background: #e9ecef;
+    color: #333;
+    border: 1px solid #ccc;
+}
+.modal-terminate .btn.btn-secondary:hover {
+    background: #d6d8db;
+}
+.modal-terminate .btn.btn-danger {
+    background: #dc3545;
+    color: #fff;
+}
+.modal-terminate .btn.btn-danger:hover {
+    background: #b52a37;
+}
+
+/* Modal animation */
+@keyframes modalPopIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .image-container {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .property-image {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .room-images {
+        width: 100%;
+        max-width: 280px;
+        height: 90px;
+    }
+}
+
+.lease-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.detail-item {
+    margin-bottom: 15px;
+}
+
+.detail-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    opacity: 0.9;
+}
+
+footer {
+    background-color: #492f18;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+}
+
+.footer-logo h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.footer-logo p {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer-contact {
+    flex: 0 0 30%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-item i {
+    margin-right: 10px;
+    width: 15px;
+}
+
+.footer-links {
+    flex: 0 0 20%;
+}
+
+.footer-links h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex: 0 0 20%;
+}
+
+.social-link {
+    width: 36px;
+    height: 36px;
+    background-color: #b89b7a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .welcome-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .welcome-text {
+        font-size: 28px;
+    }
+
+    .lease-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .property-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .lease-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Lease info overlay as a row above room images (not over property image) */
+.room-thumbnails .lease-info-overlay {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: center;
+    background: transparent;
+    color: #ffffff;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 16px 8px 16px;
+    font-size: 0.97rem;
+    margin-bottom: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    position: static;
+}
+
+.room-thumbnails .lease-info-overlay > div {
+    margin-right: 18px;
+    font-size: 0.97rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.room-thumbnails .lease-info-overlay > div:first-child {
+    font-weight: bold;
+    font-size: 1.08rem;
+    margin-right: 22px;
+}

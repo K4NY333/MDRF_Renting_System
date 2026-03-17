@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0e6d2 0%, #e8dcc0 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+        
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+        
+.content {
+    flex: 1;
+    max-width: 1500px;
+    margin-left: 90px
+}
+        
+.oops-text {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #8b4513;
+    margin-bottom: 24px;
+    text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.1);
+}
+        
+.description {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #8b4513;
+    line-height: 1.4;
+    margin-bottom: 40px;
+}
+        
+.back-button {
+    background: linear-gradient(145deg, #d4a574, #c19660);
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.2);
+    text-decoration: none;
+    display: inline-block;
+}
+        
+.back-button:hover {
+    background: linear-gradient(145deg, #c19660, #ad8449);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.3);
+}
+        
+.back-button:active {
+    transform: translateY(0);
+}
+        
+.image-placeholder {
+    flex: 1;
+    min-height: 400px;
+    border-radius: 20px;
+}
+        
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+     }
+            
+    .oops-text { font-size: 3rem; }
+            
+    .description { font-size: 1.3rem; }
+            
+    .image-placeholder {
+        width: 100%;
+        max-width: 400px;
+        min-height: 300px;
+    }
+}
+        
+@media (max-width: 480px) {
+    .oops-text { font-size: 2.5rem; }
+            
+    .description { font-size: 1.1rem; }
+}

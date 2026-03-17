@@ -1,0 +1,163 @@
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        gap: 10px;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .logo-text h1 {
+        font-size: 16px;
+    }
+
+    .logo-text p {
+        font-size: 11px;
+    }
+
+    .carousel,
+    .carousel-slide {
+        max-height: 500px;
+    }
+
+    .search-form {
+        align-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+        margin: 2 auto;
+    }
+
+    .search-group {
+        left: 4px;
+        max-width: 40%;
+    }
+    .search-btn {
+        width: 18.2%;
+        height: 36px;
+        position: relative;
+        right: 2px;
+    }
+    .form-control {
+        width: 100px;
+    }
+
+    .property-details-overlay.active {
+        width: 80%;
+    }
+    .properties-slider {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .property-card {
+        flex: 0 0 48%;
+        height: auto;
+    }
+
+    .available-heading {
+        font-size: 32px;
+    }
+
+    .leas {
+        left: 0;
+        margin: 10px auto;
+    }
+
+    .available-section img {
+        height: 150px;
+    }
+
+    .container {
+        flex-direction: row;
+        max-width: 300px;
+    }
+
+    .properties-slider {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .property-card {
+        flex: 0 0 100%;
+        max-width: 400px;
+    }
+
+    .property-img {
+        height: 250px;
+    }
+
+    .property-info h3 {
+        font-size: 16px;
+    }
+
+    .property-info p {
+        font-size: 13px;
+    }
+
+    .property-price {
+        font-size: 15px;
+    }
+
+    .popup-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-content {
+        padding: 8px 10px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .logo-text h1 {
+        font-size: 14px;
+    }
+
+    .logo-text p {
+        font-size: 10px;
+    }
+
+    .carousel,
+    .carousel-slide {
+        max-height: 400px;
+    }
+
+    .property-card {
+        flex: 0 0 100%;
+    }
+
+    .available-heading {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .logo-text h1,
+    .logo-text p {
+        text-align: center;
+    }
+
+    .user-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .user-icon i {
+        font-size: 24px;
+    }
+}

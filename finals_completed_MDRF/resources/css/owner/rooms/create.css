@@ -1,0 +1,108 @@
+h3 {
+    color: #8b7355;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 0 2px 12px #eab56622;
+}
+
+.form-group,
+.mb-3 {
+    margin-bottom: 1.5rem !important;
+}
+ 
+label {
+    color: #8b7355;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    letter-spacing: 0.5px;
+}
+ 
+input[type="number"],
+input[type="file"],
+select,
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1.1rem;
+    border-radius: 14px;
+    border: 1.5px solid #eab56644;
+    background: rgba(255, 255, 255, 0.85);
+    color: #3a2c1a;
+    font-size: 1.08rem;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px #eab56611;
+}
+ 
+input[type="number"]:focus,
+input[type="file"]:focus,
+select:focus,
+.form-control:focus {
+    border-color: #eab566;
+    outline: none;
+    box-shadow: 0 4px 16px #eab56633;
+}
+ 
+.invalid-feedback {
+    color: #f44336;
+    font-size: 0.98rem;
+    margin-top: 0.3rem;
+}
+ 
+.btn-success,
+.btn-secondary,
+.closeModalBtn {
+    background: linear-gradient(90deg, #eab566 0%, #8b7355 100%);
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    padding: 0.7rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.2rem 0.2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #eab56644;
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+ 
+.btn-secondary {
+    background: linear-gradient(90deg, #8b7355 0%, #eab566 100%);
+}
+ 
+.btn-success:hover,
+.btn-secondary:hover,
+.closeModalBtn:hover {
+    background: linear-gradient(135deg, #a2854b, #eab566);
+}
+ 
+.closeModalBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.6rem;
+    padding: 0.2rem 1rem;
+    background: none;
+    color: #8b7355;
+    border: none;
+    box-shadow: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+ 
+.closeModalBtn:hover {
+    color: #eab566;
+    background: none;
+    text-shadow: 0 0 8px #eab56688;
+}
+ 
+@media (max-width: 600px) {
+    .container {
+        padding: 1.2rem 0.5rem;
+        border-radius: 16px;
+    }
+}
+ 

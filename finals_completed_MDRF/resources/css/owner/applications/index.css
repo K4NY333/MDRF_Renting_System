@@ -1,0 +1,218 @@
+:root {
+    --earth-brown: #8b5e3c;
+    --earth-tan: #b89b7a;
+    --earth-green: #7a8450;
+    --earth-cream: #f5eee6;
+    --earth-dark: #4e342e;
+    --earth-accent: #c97d60;
+}
+
+h2,
+.applications-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--earth-dark);
+    font-size: 28px;
+}
+
+.tab-row {
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid #e7d3b8;
+}
+.tab-row-item {
+    margin-bottom: -2px;
+}
+.tab-row .nav-link {
+    border: none;
+    background: #f5eee6;
+    color: #7c532d;
+    border-radius: 12px 12px 0 0;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 28px;
+    transition: background 0.2s, color 0.2s;
+}
+.tab-row .nav-link.active,
+.tab-row .nav-link:hover {
+    background: #7c532d;
+    color: #fff;
+}
+.status-active {
+    color: #388e3c;
+    font-weight: bold;
+}
+.status-pending {
+    color: #ff9800;
+    font-weight: bold;
+}
+.status-rejected {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.tab-content {
+    padding: 10px;
+    background-color: var(--earth-cream);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(139, 94, 60, 0.08);
+}
+
+.applications-table,
+.table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.applications-table thead,
+.table thead {
+    background-color: var(--earth-brown);
+    color: #fff;
+}
+
+.applications-table th,
+.applications-table td,
+.table th,
+.table td {
+    padding: 12px;
+    border: 1px solid var(--earth-tan);
+    text-align: center;
+}
+
+.applications-table tbody tr:hover,
+.table tbody tr:hover {
+    background-color: var(--earth-cream);
+}
+
+.btn,
+.approve-btn,
+.view-pdf-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--earth-green);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--earth-brown);
+}
+
+.btn-success,
+.approve-btn {
+    background-color: var(--earth-accent);
+    color: #fff;
+}
+
+.btn-success:hover,
+.approve-btn:hover {
+    background-color: var(--earth-brown);
+}
+
+.btn-danger {
+    background-color: #e57373;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: var(--earth-brown);
+}
+
+.badge.bg-warning.text-dark {
+    background: #ffe082;
+    color: var(--earth-brown) !important;
+    font-weight: bold;
+}
+
+.badge.bg-success {
+    background: var(--earth-green);
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.badge.bg-danger {
+    background: var(--earth-accent);
+    color: #fff !important;
+    font-weight: bold;
+}
+
+span[style*="color:red"],
+.status-unpaid {
+    font-weight: bold;
+    color: var(--earth-accent) !important;
+}
+
+span[style*="color:green"],
+.status-paid {
+    font-weight: bold;
+    color: var(--earth-green) !important;
+}
+
+.status-active {
+    color: var(--earth-green);
+    font-weight: bold;
+}
+.status-pending {
+    color: var(--earth-accent);
+    font-weight: bold;
+}
+.status-rejected {
+    color: #e57373;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .applications-table thead,
+    .table thead {
+        display: none;
+    }
+
+    .applications-table,
+    .applications-table tbody,
+    .applications-table tr,
+    .applications-table td,
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .applications-table tr,
+    .table tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid var(--earth-tan);
+    }
+
+    .applications-table td,
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .applications-table td::before,
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+        color: var(--earth-brown);
+    }
+}
